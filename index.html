@@ -591,6 +591,13 @@ const password = document.getElementById("password").value;
             "Content-Type": "application/json",
             "Accept": "application/json"
           },
+          const formData = {
+  name: fullName,
+  email: email,
+  password : password,        
+  _subject: "New Ottacon Supplier Registration",
+  _template: "table"
+};
           body: JSON.stringify(formData)
         }
       );
