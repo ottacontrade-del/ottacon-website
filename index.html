@@ -73,8 +73,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 50px 6%;
-      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('building-bg.jpg');
+      padding: 40px 5%;
+      /* Lighter overlay so the building image shows through clearly */
+      background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.55)), url('building-bg.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
@@ -82,11 +83,15 @@
 
     .supplier-box {
       width: 100%;
-      max-width: 520px;
-      padding: 45px 40px;
-      background: #ffffff;
+      max-width: 500px;
+      padding: 35px 30px;
+      /* Semi-transparent glass effect so background building shows through slightly */
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border-radius: 16px;
-      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       position: relative;
       z-index: 10;
     }
@@ -94,44 +99,44 @@
     .company-label {
       text-align: center;
       color: var(--accent);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .supplier-box h1 {
       text-align: center;
       color: var(--primary);
-      font-size: 28px;
+      font-size: 25px;
       font-weight: 800;
       line-height: 1.25;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .supplier-description {
       text-align: center;
       color: var(--text-muted);
-      font-size: 15px;
-      margin-bottom: 28px;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     label {
       display: block;
-      margin: 16px 0 6px;
+      margin: 12px 0 5px;
       color: var(--primary);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
     }
 
     input {
       width: 100%;
-      padding: 13px 16px;
+      padding: 11px 14px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      font-size: 15px;
-      background: #f8fafc;
+      font-size: 14px;
+      background: #ffffff;
       transition: all 0.2s ease;
     }
 
@@ -144,13 +149,13 @@
 
     .submit-button {
       width: 100%;
-      margin-top: 28px;
-      padding: 14px;
+      margin-top: 22px;
+      padding: 13px;
       border: none;
       border-radius: var(--radius);
       background: var(--gold);
       color: #ffffff;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       cursor: pointer;
       display: flex;
@@ -174,16 +179,16 @@
     }
 
     .form-note {
-      margin-top: 16px;
+      margin-top: 12px;
       text-align: center;
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 12px;
     }
 
     #form-message {
-      margin-top: 16px;
+      margin-top: 12px;
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       overflow-wrap: anywhere;
     }
@@ -382,11 +387,11 @@
 
     @media (max-width: 768px) {
       .supplier {
-        padding: 30px 5%;
+        padding: 20px 4%;
       }
 
       .supplier-box {
-        padding: 30px 20px;
+        padding: 25px 20px;
       }
 
       header {
@@ -594,7 +599,7 @@
     supplierForm.addEventListener("submit", async function (event) {
       event.preventDefault();
 
-      const fullName = document.getElementById("full-name").value.trim();
+      *fullName = document.getElementById("full-name").value.trim();
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value;
 
