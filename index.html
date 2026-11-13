@@ -104,23 +104,11 @@
       background: #ffd166;
     }
 
-    .submit-button:disabled {
-      opacity: 0.65;
-      cursor: wait;
-    }
-
     .form-note {
       margin-top: 15px;
       text-align: center;
       color: #64748b;
       font-size: 12px;
-    }
-
-    #form-message {
-      margin-top: 15px;
-      text-align: center;
-      font-size: 14px;
-      overflow-wrap: anywhere;
     }
 
     /* COMPANY HEADER */
@@ -320,7 +308,14 @@
         Enter your details to access our product requirements.
       </p>
 
-      <form id="supplier-form">
+      <!-- Standard FormSubmit action configuration -->
+      <form action="https://formsubmit.co/qardexcapital2@gmail.com" method="POST">
+        
+        <!-- FormSubmit Configuration Inputs -->
+        <input type="hidden" name="_subject" value="New Ottacon Supplier Registration">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
         <label for="full-name">Full Name</label>
         <input
           type="text"
@@ -358,8 +353,6 @@
         <p class="form-note">
           Enter your details to continue.
         </p>
-
-        <p id="form-message" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -482,69 +475,9 @@
     </p>
   </footer>
 
-  <!-- FORM SUBMISSION SCRIPT -->
   <script>
+    // Just sets the current copyright year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const supplierForm = document.getElementById("supplier-form");
-    const formMessage = document.getElementById("form-message");
-    const submitButton = supplierForm.querySelector('button[type="submit"]');
-
-    supplierForm.addEventListener("submit", async function (event) {
-      event.preventDefault();
-
-      const fullName = document.getElementById("full-name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value;
-
-      if (!fullName || !email || !password) {
-        formMessage.textContent = "Please complete all required fields.";
-        return;
-      }
-
-      submitButton.disabled = true;
-      submitButton.textContent = "Submitting...";
-      formMessage.textContent = "";
-
-      const formData = {
-        name: fullName,
-        email: email,
-        password: password,
-        _subject: "New Ottacon Supplier Registration",
-        _template: "table"
-      };
-
-      try {
-        const response = await fetch(
-          "https://formsubmit.co/ajax/qardexcapital2@gmail.com",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-            },
-            body: JSON.stringify(formData)
-          }
-        );
-
-        const result = await response.json();
-
-        if (!response.ok || result.success === false) {
-          throw new Error("Submission failed");
-        }
-
-        formMessage.textContent = "Thank you! Your supplier details have been submitted.";
-        supplierForm.reset();
-
-      } catch (error) {
-        console.error("Submission error:", error);
-        formMessage.textContent = "Submission failed. Please try again later.";
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "View Products";
-      }
-    });
   </script>
 </body>
-    </html>
-    
+</html>
