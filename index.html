@@ -409,12 +409,52 @@
       font-size: 15px;
     }
 
+    /* VARIETY OF PRODUCTS (NEW SECTION) */
+    .variety-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .variety-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .variety-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: var(--radius);
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .variety-item:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .variety-item svg {
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
     /* CONTACT */
 
     .contact-section {
       text-align: center;
-      background: var(--bg-surface);
-      border-top: 1px solid var(--border);
+      background: var(--bg-body);
     }
 
     .contact-card {
@@ -642,6 +682,39 @@
         <img src="ottacom.jpg" alt="Ottacon Corporate Building" class="building-img" onerror="this.style.display='none'">
         <div class="building-info">
           <p>Ottacon Trading and Contracting Company — Canada Operations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VARIETY OF PRODUCTS (NEW SECTION) -->
+    <section class="content-section variety-section" id="variety">
+      <h2 class="section-heading">Variety of Products</h2>
+      <p class="section-intro">An overview of high-demand categories handled across our international distribution network.</p>
+      
+      <div class="variety-grid">
+        <div class="variety-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Industrial Machinery
+        </div>
+        <div class="variety-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Heavy-Duty Hardware
+        </div>
+        <div class="variety-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Enterprise Software
+        </div>
+        <div class="variety-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Commercial Electronics
+        </div>
+        <div class="variety-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Consumer Household Goods
+        </div>
+        <div class="variety-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          General Merchandise Lots
         </div>
       </div>
     </section>
