@@ -18,7 +18,7 @@
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
       --border: #374151;
-      --radius: 10px;
+      --radius: 12px;
     }
 
     * {
@@ -43,8 +43,8 @@
     .top-bar {
       background: #030712;
       color: #9ca3af;
-      padding: 10px 7%;
-      font-size: 13px;
+      padding: 12px 7%;
+      font-size: 14px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -70,11 +70,11 @@
     /* SUPPLIER ACCESS HERO WITH BUILDING BACKGROUND */
 
     .supplier {
-      min-height: calc(100vh - 41px);
+      min-height: calc(100vh - 45px);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 30px 20px;
+      padding: 50px 20px;
       background: linear-gradient(rgba(3, 7, 18, 0.65), rgba(3, 7, 18, 0.8)), url('building-bg.jpg');
       background-size: cover;
       background-position: center;
@@ -83,14 +83,14 @@
 
     .supplier-box {
       width: 100%;
-      max-width: 500px;
-      padding: 35px 30px;
-      background: rgba(17, 24, 39, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 16px;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      max-width: 620px;
+      padding: 48px 45px;
+      background: rgba(17, 24, 39, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 18px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       position: relative;
       z-index: 10;
     }
@@ -98,43 +98,44 @@
     .company-label {
       text-align: center;
       color: var(--gold);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .supplier-box h1 {
       text-align: center;
       color: #ffffff;
-      font-size: 26px;
+      font-size: 32px;
       font-weight: 800;
-      line-height: 1.25;
-      margin-bottom: 8px;
+      line-height: 1.2;
+      margin-bottom: 12px;
     }
 
     .supplier-description {
       text-align: center;
       color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 22px;
+      font-size: 15px;
+      margin-bottom: 28px;
+      line-height: 1.5;
     }
 
     label {
       display: block;
-      margin: 14px 0 6px;
+      margin: 18px 0 8px;
       color: var(--text-main);
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
     }
 
     input {
       width: 100%;
-      padding: 13px 15px;
+      padding: 15px 18px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      font-size: 15px;
+      font-size: 16px;
       background: #0b0f19;
       color: #ffffff;
       transition: all 0.25s ease;
@@ -144,31 +145,31 @@
       outline: none;
       background: #111827;
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
     }
 
     .submit-button {
       width: 100%;
-      margin-top: 24px;
-      padding: 14px;
+      margin-top: 30px;
+      padding: 16px;
       border: none;
       border-radius: var(--radius);
       background: var(--gold);
       color: #0b0f19;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
     }
 
     .submit-button:hover {
       background: var(--gold-hover);
-      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.35);
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
     }
 
     .submit-button:active {
@@ -182,16 +183,16 @@
     }
 
     .form-note {
-      margin-top: 14px;
+      margin-top: 16px;
       text-align: center;
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 14px;
     }
 
     #form-message {
-      margin-top: 14px;
+      margin-top: 16px;
       text-align: center;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       overflow-wrap: anywhere;
     }
@@ -409,7 +410,7 @@
       font-size: 15px;
     }
 
-    /* VARIETY OF PRODUCTS (NEW SECTION) */
+    /* VARIETY OF PRODUCTS */
     .variety-section {
       background: var(--bg-surface);
       border-top: 1px solid var(--border);
@@ -686,7 +687,7 @@
       </div>
     </section>
 
-    <!-- VARIETY OF PRODUCTS (NEW SECTION) -->
+    <!-- VARIETY OF PRODUCTS -->
     <section class="content-section variety-section" id="variety">
       <h2 class="section-heading">Variety of Products</h2>
       <p class="section-intro">An overview of high-demand categories handled across our international distribution network.</p>
