@@ -375,11 +375,43 @@
       font-size: 16px;
     }
 
+    /* CORPORATE BUILDING DISPLAY SECTION */
+    .building-display-section {
+      text-align: center;
+      background: var(--bg-body);
+      padding-top: 20px;
+    }
+
+    .building-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    .building-img {
+      width: 100%;
+      height: auto;
+      max-height: 450px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .building-info {
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
     /* CONTACT */
 
     .contact-section {
       text-align: center;
-      background: var(--bg-body);
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
     }
 
     .contact-card {
@@ -598,7 +630,20 @@
       </div>
     </section>
 
-    /* CONTACT */
+    <!-- CORPORATE BUILDING IMAGE DISPLAY (OTT ACOM BUILDING) -->
+    <section class="content-section building-display-section" id="corporate-building">
+      <h2 class="section-heading">Our Corporate Headquarters</h2>
+      <p class="section-intro">Our infrastructure reflects our commitment to global trading excellence and supplier partnership.</p>
+      
+      <div class="building-card">
+        <img src="ottacom.jpg" alt="Ottacon Corporate Building" class="building-img" onerror="this.style.display='none'">
+        <div class="building-info">
+          <p>Ottacon Trading and Contracting Company — Canada Operations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="content-section contact-section" id="contact">
       <h2 class="section-heading">Corporate Office</h2>
       <div class="contact-card">
