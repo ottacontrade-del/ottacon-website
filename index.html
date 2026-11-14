@@ -301,7 +301,7 @@
       margin-bottom: 0;
     }
 
-    /* PRODUCT CATEGORIES */
+    /* PRODUCT CATEGORIES & IMAGES */
 
     .products-section {
       background: var(--bg-surface);
@@ -311,15 +311,15 @@
 
     .categories {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
     }
 
     .category-card {
       background: var(--bg-card);
-      padding: 28px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
+      overflow: hidden;
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
@@ -327,6 +327,18 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
       border-color: var(--accent);
+    }
+
+    .category-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #0b0f19;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .category-content {
+      padding: 24px;
     }
 
     .category-card h3 {
@@ -525,33 +537,51 @@
 
       <div class="categories">
         <article class="category-card">
-          <h3>Tools & Hardware</h3>
-          <p>Professional tools, heavy-duty hardware, structural fittings, and accessories.</p>
+          <img src="hardware.jpg" alt="Tools & Hardware" class="category-image" onerror="this.style.display='none'">
+          <div class="category-content">
+            <h3>Tools & Hardware</h3>
+            <p>Professional tools, heavy-duty hardware, structural fittings, and accessories.</p>
+          </div>
         </article>
 
         <article class="category-card">
-          <h3>Software & Technology</h3>
-          <p>Enterprise software licenses, IT solutions, and digital infrastructure supplies.</p>
+          <img src="software.jpg" alt="Software & Technology" class="category-image" onerror="this.style.display='none'">
+          <div class="category-content">
+            <h3>Software & Technology</h3>
+            <p>Enterprise software licenses, IT solutions, and digital infrastructure supplies.</p>
+          </div>
         </article>
 
         <article class="category-card">
-          <h3>Electronics</h3>
-          <p>Commercial electronic hardware, technical components, and peripheral devices.</p>
+          <img src="electronics.jpg" alt="Electronics" class="category-image" onerror="this.style.display='none'">
+          <div class="category-content">
+            <h3>Electronics</h3>
+            <p>Commercial electronic hardware, technical components, and peripheral devices.</p>
+          </div>
         </article>
 
         <article class="category-card">
-          <h3>Industrial Equipment</h3>
-          <p>Heavy machinery, plant equipment, and specialized industrial supplies.</p>
+          <img src="industrial.jpg" alt="Industrial Equipment" class="category-image" onerror="this.style.display='none'">
+          <div class="category-content">
+            <h3>Industrial Equipment</h3>
+            <p>Heavy machinery, plant equipment, and specialized industrial supplies.</p>
+          </div>
         </article>
 
         <article class="category-card">
-          <h3>Household Goods</h3>
-          <p>Consumer goods, utility items, and everyday-use distribution products.</p>
+          <img src="household.jpg" alt="Household Goods" class="category-image" onerror="this.style.display='none'">
+          <div class="category-content">
+            <h3>Household Goods</h3>
+            <p>Consumer goods, utility items, and everyday-use distribution products.</p>
+          </div>
         </article>
 
         <article class="category-card">
-          <h3>General Merchandise</h3>
-          <p>A comprehensive range of vetted goods for high-volume business procurement.</p>
+          <img src="merchandise.jpg" alt="General Merchandise" class="category-image" onerror="this.style.display='none'">
+          <div class="category-content">
+            <h3>General Merchandise</h3>
+            <p>A comprehensive range of vetted goods for high-volume business procurement.</p>
+          </div>
         </article>
       </div>
     </section>
@@ -568,7 +598,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    /* CONTACT */
     <section class="content-section contact-section" id="contact">
       <h2 class="section-heading">Corporate Office</h2>
       <div class="contact-card">
